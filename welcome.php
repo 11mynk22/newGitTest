@@ -77,7 +77,7 @@ if(isset($_POST['display']))
     $user_name=$_POST['name'];//here getting result from the post array after submitting the form.  
    
     
-    $query="select user_name, comment from data where user_name='$user_name'";
+    $query="select word, definition from data where word='$user_name'";
     
     $run_query=mysqli_query($dbcon,$query);
     

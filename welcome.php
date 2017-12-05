@@ -1,5 +1,4 @@
 <?php
-
 require('Persistence.php');
 $comment_post_ID = 1;
 $db = new Persistence();
@@ -34,8 +33,8 @@ $has_comments = (count($comments) > 0);
                 <ul>
                     <li class="active"><a href="#">
                     Home</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Play</a></li>
+                    <li><a href="#">Lookup</a></li>
                     <li style="color: white;">
                         <?php  
     echo $_SESSION['email'];  
@@ -76,25 +75,21 @@ if(isset($_POST['display']))
 {  
     $user_name=$_POST['name'];//here getting result from the post array after submitting the form.  
    
-    
     $query="select word, definition from data where word='$user_name'";
-    
     $run_query=mysqli_query($dbcon,$query);
-    
     if(mysqli_num_rows($run_query)>0)
     {
         while($row=mysqli_fetch_array($run_query)){
-            echo "</br></br>";
+            echo "<br>";
             echo "<strong>$row[0]</strong>";
-            echo ":</br></br>";
-            echo "<strong>Definition:</strong> $row[1]";
+            echo "</br></br>";
+            echo "<strong>Definition: </strong>$row[1]";
             echo "</br></br>";
         }
     }
 }  
   
 ?>
-
                 </div>
             </article>
 
@@ -153,11 +148,8 @@ if(isset($_POST['display']))
 
                     <input type="hidden" name="comment_post_ID" value="<?php echo($comment_post_ID); ?>" id="comment_post_ID" />
                     <input name="submit" type="submit" value="Submit comment" />
-
                 </form>
-
             </div>
-
         </section>
 
         <section id="extras" class="body">
@@ -165,26 +157,23 @@ if(isset($_POST['display']))
                 <h2>blogroll</h2>
                 <ul>
                     <li><a href="#" rel="external">HTML5 Doctor</a></li>
-                    <li><a href="#" rel="external">HTML5 Spec (working draft)</a></li>
                     <li><a href="#" rel="external">Smashing Magazine</a></li>
                     <li><a href="#" rel="external">W3C</a></li>
                     <li><a href="#" rel="external">Wordpress</a></li>
                     <li><a href="#" rel="external">Wikipedia</a></li>
 
                     <li><a href="#" rel="external">HTML5 Doctor</a></li>
-                    <li><a href="#" rel="external">HTML5 Spec (working draft)</a></li>
                     <li><a href="#" rel="external">Smashing Magazine</a></li>
                     <li><a href="#" rel="external">W3C</a></li>
                     <li><a href="#" rel="external">Wordpress</a></li>
                     <li><a href="#" rel="external">Wikipedia</a></li>
 
                     <li><a href="#" rel="external">HTML5 Doctor</a></li>
-                    <li><a href="#" rel="external">HTML5 Spec (working draft)</a></li>
                     <li><a href="#" rel="external">Smashing Magazine</a></li>
                     <li><a href="#" rel="external">W3C</a></li>
                     <li><a href="#" rel="external">Wordpress</a></li>
                     <li><a href="#" rel="external">Wikipedia</a></li>
-                    <article class="hentry">
+                    <article class="hentry"></article>
                 </ul>
             </div>
 
@@ -192,7 +181,6 @@ if(isset($_POST['display']))
                 <h2>social</h2>
                 <ul>
                     <li><a href="http://delicious.com/">delicious</a></li>
-                    <li><a href="http://digg.com/users/">digg</a></li>
                     <li><a href="http://facebook.com/">facebook</a></li>
                     <li><a href="http://www.last.fm">last.fm</a></li>
                     <li><a href="http://website.com/feed/" rel="alternate">rss</a></li>
@@ -204,17 +192,16 @@ if(isset($_POST['display']))
         <footer id="contentinfo" class="body">
             <address id="about" class="vcard body">
 			<span class="primary">
-				<strong><a href="#" class="fn url">Smashing Magazine</a></strong>
+				<strong><a href="#" class="fn url">Vocabulary</a></strong>
 				<span class="role">Amazing Magazine</span>
 			</span>
 		
-			<img src="images/avatar.gif" alt="Smashing Magazine Logo" class="photo" />
 		
 			<span class="bio">Smashing Magazine is a website and blog that offers resources and advice to web developers and web designers. It was founded by Sven Lennartz and Vitaly Friedman.</span>
 		
 		</address>
 
-            <p>20017 &copy; <a href="http://smashingmagazine.com">Group</a>.</p>
+            <p>2017 &copy; <a href="http://smashingmagazine.com">Group</a>.</p>
         </footer>
 
 

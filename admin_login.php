@@ -24,10 +24,10 @@
                         <form role="form" method="post" action="admin_login.php">
                             <fieldset>
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="Name" name="admin_name" type="text" autofocus>
+                                    <input class="form-control" placeholder="Name" name="admin_name" type="text" autofocus required>
                                 </div>
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="Password" name="admin_pass" type="password" value="">
+                                    <input class="form-control" placeholder="Password" name="admin_pass" type="password" value="" required>
                                 </div>
 
 

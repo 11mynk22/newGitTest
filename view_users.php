@@ -21,9 +21,10 @@
 <body>
 
     <div class="table-scrol">
+
         <h1 align="center">All the Users</h1>
 
-        <h4><a href="logout.php">Logout</a></h4>
+        <div style="text-align: right; margin-right: 40px;"><a class="btn btn-danger" href="logout.php">Logout</a></div>
 
         <div class="table-responsive">
             <!--this is used for responsive display in mobile and other devices-->

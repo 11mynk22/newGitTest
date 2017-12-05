@@ -7,7 +7,7 @@ class Persistence {
   
   function __construct() {
     session_start();
-
+    
     if( isset($_SESSION['blog_comments']) == true ){
       $this->data = $_SESSION['blog_comments'];
     }

@@ -10,7 +10,7 @@ $has_comments = (count($comments) > 0);
     <html lang="en-US">
 
     <head>
-        <title>Smashing HTML5!</title>
+        <title>Example</title>
         <meta charset="utf-8" />
 
         <link rel="stylesheet" href="css/main.css" type="text/css" />

@@ -1,6 +1,6 @@
 # Word's with Example
 
-loudspeaker:
+:loudspeaker:
 **Notic:** Under development all features are not complete yet!
 
 ## Getting Started
